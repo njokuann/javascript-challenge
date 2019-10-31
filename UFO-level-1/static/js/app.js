@@ -1,12 +1,13 @@
 // Get a reference to the table body
 var tbody = d3.select("tbody");
 
+// Assign data to descriptive variable
 var aliens = data;
 
 // Console.log the alien data from data.js
 console.log(data);
 
-// // Step 5: Use d3 to update each cell's text with
+// // Use d3 to update each cell's text with
 // // alien report values (weekday, date, high, low)
 data.forEach(function(data) {
     console.log(data);
@@ -20,12 +21,14 @@ data.forEach(function(data) {
   });
 });
 
-
+// # Select the button
 var button = d3.select("#filter-btn");
 
+//# Select the input element and get the raw HTML node
 button.on("click", function() {
     var inputElement = d3.select("#datetime");
 
+    // Get the value property of the input element
     var inputValue = inputElement.property("value");
 
     console.log(inputValue);
